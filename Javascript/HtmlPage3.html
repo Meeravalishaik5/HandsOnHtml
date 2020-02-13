@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+        ////$(document).ready(function () {
+        ////    $("button").click(function () {
+        ////        $("#test").hide();
+        ////    });
+        ////});
+        //$(document).ready(function () {
+        //    $("#hide").click(function () {
+        //        $("p").hide();
+        //    });
+        //    $("#show").click(function () {
+        //        $("p").show();
+        //    });
+        //});
+        //$(document).ready(function () {
+        //    $(".out-btn").click(function () {
+        //        $("p").fadeOut(1000);
+        //    });
+        //    $(".in-btn").click(function () {
+        //        $("p").fadeIn(1000);
+        //    });
+        //});
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("img").animate({
+                left:300});
+           });
+        });
+    </script>
+    <style type="text/css">
+        img{
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <button type="button"> Start Animation</button>
+    <p> <img src="image.jpg"/></p>
+    <!--<h2>This is a heading</h2>
+    <p>This is a paragraph</p>
+    <p id="test">This is another paragraph</p>
+    <button>Clickme</button>-->
+
+    <!--h2>This is heading</h2>
+    <p> I am paragraph here to explain show and hide</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>-->
+
+    <!--<p>This is fadein and fadeout</p>
+    <button type="button" class="out-btn">FadeOut</button>
+    <button type="button" class="in-btn">FadeIn</button>-->
+</body>
+</html>

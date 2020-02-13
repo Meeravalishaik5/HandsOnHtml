@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function validate() {
+            if (document.myForm.Name.value == "") {
+                 alert("Name Cannot be empty..");
+                    document.myForm.Name.focus();
+                    return false;
+            }
+            if (document.myForm.Name.value != "") {
+                var pat = /[0-9]/;
+                var pat1=/[!@#\$%\^\&*\)\(+=._-]/;
+                if (pat.test(document.myForm.Name.value) == true) {
+                    alert("Name Cannot have numbers..");
+                    document.myForm.Name.focus();
+                    return false;
+                }
+                 if (pat1.test(document.myForm.Name.value) == true) {
+                    alert("Name Cannot have Special Characters..");
+                    document.myForm.Name.focus();
+                    return false;
+                }
+                var pat2 = / [a-zA-Z]{2,30}$/;
+                 if (pat2.test(document.myForm.Name.value) == true) {
+                    alert("Name length should be between 2 to 30 characters..");
+                    document.myForm.Name.focus();
+                    return false;
+                }
+            }
+             if (document.myForm.pas.value == "") {
+                 alert("Password Cannot be empty..");
+                    document.myForm.pas.focus();
+                    return false;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h3>Personal Details</h3>
+        <form name="myForm" onsubmit="return (validate());">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="Name" /></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="r1" value="Male" />Male
+                        <input type="radio" name="r1" value="FeMale" />Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>HomeTown</td>
+                    <td>
+                        <select name="Hometown">
+                            <option value="-1" selected>Choose Yours</option>
+                            <option value="1">Chennai</option>
+                            <option value="2">Hyd</option>
+                            <option value="3">Banglore</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Skills</td>
+                    <td>
+                        <input type="checkbox"  name="c1"/>HTML
+                        <input type="checkbox" name="c1"/>CSS
+                        <input type="checkbox" name="c1"/>BOOTSTRAP
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pas"/></td>
+                </tr>
+            </table>
+            <input type="submit" value="submit" />
+        </form>
+</body>
+</html>
